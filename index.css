@@ -1,0 +1,88 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+body {
+    margin: 0 auto;
+    background-image: url(https://images.unsplash.com/photo-1574623452334-1e0ac2b3ccb4?q=80&w=2187&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    color: #EEEEEE;
+    padding: 4rem 0;
+	width: 90%;
+	max-width: 60rem;
+	min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    background: rgb(0, 73, 150, 0.9);
+    padding: 40px 0;
+    border: solid #003153; 
+    height: 400px; 
+    min-width: 500px;
+    max-width: 700px;
+    margin: auto;
+    border-radius: 5%;
+}
+
+.scoreboard {
+    text-align: center;
+    font-family: Verdana;
+    background: #4180b4;
+    padding: .5rem 1.5rem;
+    border: solid #003153;
+    min-height: 300px;
+    max-height: 500px;
+    position: relative;
+}
+
+.score {
+    background: #0a0001;
+    font-size: 90px;
+    color: #F94F6D;
+    width: 150px;
+    margin: 20px 0;
+    padding: .5rem;     
+}
+
+button {
+    background: none;
+    border: solid white 1px;
+    color: #EEEEEE;
+    width: 45px;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+h3 {
+    font-size: 40px;
+    margin: 20px 0;
+}
+
+.score, .scoreboard, button {
+    border-radius: 10%;
+}
+
+.score, button {
+    font-family: 'Cursed Timer ULiL', sans-serif;
+}
+
+#reset-btn {
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    margin-left: auto;
+    background-color: white;
+    color: #F94F6D;
+    border: solid #F94F6D 2px;
+}
+
+.scoreboard.winning {
+    animation: shadow-blink 2s infinite; 
+}
+@keyframes shadow-blink {
+	50% {
+		box-shadow: 0 0 20px 15px #F94F6D;
+	}  
+}
