@@ -35,13 +35,13 @@ function clickHandler(element, increment) {
 
 //Home & guest score update event handlers//
 
-homeScoreBoard.addEventListener("click", function(e) {
+homeBorder.addEventListener("click", function(e) {
     if (e.target.dataset.home) {   
         clickHandler(homeScore, parseInt(e.target.dataset.home))
     }
 })
 
-guestScoreBoard.addEventListener("click", function(e) {
+guestBorder.addEventListener("click", function(e) {
     if (e.target.dataset.guest) {
         clickHandler(guestScore, parseInt(e.target.dataset.guest))
     }
