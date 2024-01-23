@@ -1,10 +1,3 @@
-let add1Home = document.getElementById("home1");
-let add2Home = document.getElementById("home2");
-let add3Home = document.getElementById("home3");
-let add1Guest = document.getElementById("guest1");
-let add2Guest = document.getElementById("guest2");
-let add3Guest = document.getElementById("guest3");
-
 let homeBorder = document.getElementById("home-scoreboard");
 let guestBorder = document.getElementById("guest-scoreboard")
 
@@ -40,34 +33,19 @@ function clickHandler(element, increment) {
 }
 
 
-//Home score update event handlers//
+//Home & guest score update event handlers//
 
-add1Home.addEventListener("click", function (e) {
-    clickHandler(homeScore, 1);
+homeScoreBoard.addEventListener("click", function(e) {
+    if (e.target.dataset.home) {   
+        clickHandler(homeScore, parseInt(e.target.dataset.home))
+    }
 })
 
-add2Home.addEventListener("click", function (e) {
-    clickHandler(homeScore, 2);
-})
-
-add3Home.addEventListener("click", function (e) {
-    clickHandler(homeScore, 3);
-})
-
-//Guest score update//
-
-add1Guest.addEventListener("click", function (e) {
-    clickHandler(guestScore, 1);
-})
-
-add2Guest.addEventListener("click", function (e) {
-    clickHandler(guestScore, 2);
-})
-
-add3Guest.addEventListener("click", function (e) {
-    clickHandler(guestScore, 3);
-})
-
+guestScoreBoard.addEventListener("click", function(e) {
+    if (e.target.dataset.guest) {
+        clickHandler(guestScore, parseInt(e.target.dataset.guest))
+    }
+}) 
 //Reset score//
 
 resetBtn.addEventListener("click", function (e) {
